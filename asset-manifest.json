@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/react-museum/static/css/main.5ecd60fb.chunk.css",
-    "main.js": "/react-museum/static/js/main.aa9bf31b.chunk.js",
-    "main.js.map": "/react-museum/static/js/main.aa9bf31b.chunk.js.map",
+    "main.js": "/react-museum/static/js/main.0eff6cc7.chunk.js",
+    "main.js.map": "/react-museum/static/js/main.0eff6cc7.chunk.js.map",
     "runtime-main.js": "/react-museum/static/js/runtime-main.dd256178.js",
     "runtime-main.js.map": "/react-museum/static/js/runtime-main.dd256178.js.map",
     "static/css/2.f4a02307.chunk.css": "/react-museum/static/css/2.f4a02307.chunk.css",
     "static/js/2.86bd79f2.chunk.js": "/react-museum/static/js/2.86bd79f2.chunk.js",
     "static/js/2.86bd79f2.chunk.js.map": "/react-museum/static/js/2.86bd79f2.chunk.js.map",
     "index.html": "/react-museum/index.html",
-    "precache-manifest.8fd71c5107a09ee418dcca82c4f8749a.js": "/react-museum/precache-manifest.8fd71c5107a09ee418dcca82c4f8749a.js",
+    "precache-manifest.e0ebffa5be727a233b109d36ae4ade99.js": "/react-museum/precache-manifest.e0ebffa5be727a233b109d36ae4ade99.js",
     "service-worker.js": "/react-museum/service-worker.js",
     "static/css/2.f4a02307.chunk.css.map": "/react-museum/static/css/2.f4a02307.chunk.css.map",
     "static/css/main.5ecd60fb.chunk.css.map": "/react-museum/static/css/main.5ecd60fb.chunk.css.map",
@@ -21,6 +21,6 @@
     "static/css/2.f4a02307.chunk.css",
     "static/js/2.86bd79f2.chunk.js",
     "static/css/main.5ecd60fb.chunk.css",
-    "static/js/main.aa9bf31b.chunk.js"
+    "static/js/main.0eff6cc7.chunk.js"
   ]
 }
