@@ -1,22 +1,23 @@
 import React, { useState, useEffect } from 'react'
-import { Menu, Image, Grid } from 'semantic-ui-react'
+import { Menu, Image, Dimmer, Loader } from 'semantic-ui-react'
 import 'semantic-ui-css/semantic.min.css';
 
-const painters = ['Da vinci', 'Monet', 'Van Gogh', 'Turner']
+const painters = ['Leonardo Da Vinci', 'Claude Monet', 'Van Gogh', 'William Turner']
 
 const apiKey = "ccfb43d0-49a2-11ea-89db-0d1e2aec8854"
 
 export default function App() {
 
-  const [activeItem, setActiveItem] = useState('Da vinci');
+  const [activeItem, setActiveItem] = useState('Leonardo Da Vinci');
   const [paintings, setPaintings] = useState([])
+  const [loading, setLoading] = useState(false)
 
   const fetchData = async () => {
-    const response = await fetch(`https://api.harvardartmuseums.org/object?q=${activeItem}&apikey=${apiKey}`)
+    setLoading(true)
+    const response = await fetch(`https://api.harvardartmuseums.org/object?q=${activeItem}&apikey=${apiKey}&hasimage=1&size=20`)
     const data = await response.json()
-
-    setPaintings(data)
-    console.log(data)
+    setPaintings(data.records)
+    setLoading(false)
   }
 
   useEffect(() => {
@@ -24,16 +25,14 @@ export default function App() {
   }, [activeItem])
 
 
-
-
+  console.log(paintings)
   return (
     <>
-      <Grid>
-        <Grid.Column width={6}></Grid.Column>
-        <Menu size='massive'
-          fixed="left"
+      <div style={{ backgroundColor: "#14181c" }}>
+
+        <Menu
+          stackable
           style={styles.menu}
-          vertical
         >
           {painters.map((painter, index) => (
             <Menu.Item
@@ -46,13 +45,16 @@ export default function App() {
           ))}
         </Menu>
 
-        <Grid.Column width={5}>
-          <Image src={"https://ids.lib.harvard.edu/ids/view/47174896?width=3000&height=3000"} size="huge" />
-        </Grid.Column>
-        <Grid.Column width={5}>
-          <Image src={"https://ids.lib.harvard.edu/ids/view/47174896?width=3000&height=3000"} size="large" />
-        </Grid.Column>
-      </Grid>
+        <Dimmer active={loading}>
+          <Loader size='huge'>Loading</Loader>
+        </Dimmer>
+
+        <Image.Group size='medium' style={{ marginLeft: 40 }}>
+          {paintings.map((painting: any) => {
+            return (<Image src={`${painting.primaryimageurl}?width=300&height=300`} centered />)
+          })}
+        </Image.Group>
+      </div>
     </>
 
   )
