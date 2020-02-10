@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "eb6cd48d507f06b786f6a40fefb680d0",
+    "revision": "2f477b61130b5acb6177c63e3fe8279b",
     "url": "/react-museum/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-museum/static/css/2.f4a02307.chunk.css"
   },
   {
-    "revision": "7ea055958a64f23e16d5",
+    "revision": "a44734667d9b118b6ebe",
     "url": "/react-museum/static/css/main.5ecd60fb.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-museum/static/js/2.86bd79f2.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "7ea055958a64f23e16d5",
-    "url": "/react-museum/static/js/main.df1b078c.chunk.js"
+    "revision": "a44734667d9b118b6ebe",
+    "url": "/react-museum/static/js/main.8b47c1c5.chunk.js"
   },
   {
     "revision": "c3555723f3eb9a99d012",
